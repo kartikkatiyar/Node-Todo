@@ -1,18 +1,19 @@
 const { writeTodos, readTodos } = require("./helper");
 
 // Create a new todo
-const createTodo = (title) => {
-  const todos = readTodos();
+const createTodo = async(title) => {
+  const todos = JSON.parse(await readTodos());
   const newTodo = { id: Date.now(), title };
   todos.push(newTodo);
-  writeTodos(todos)
+  await writeTodos(todos)
     .then(() => console.log("Todo created:", newTodo),(error) => console.log(error));
 };
 
 // Read all todos
-const readTodosAll = () => {
-  const todos = readTodos();
+const readTodosAll = async () => {
+  const todos = await readTodos();
   console.log("All Todos:", todos);
+  return todos;
 };
 
 // Update a todo

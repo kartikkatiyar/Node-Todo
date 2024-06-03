@@ -13,7 +13,7 @@ const readTodos = () => {
         resolve(data);
       }
     };
-    fs.readFile(filePath, callback);
+    fs.readFile(filePath, { encoding: "utf-8" }, callback);
   });
 };
 

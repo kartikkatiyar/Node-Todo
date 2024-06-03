@@ -1,0 +1,16 @@
+{
+  "name": "todo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha 'tests/**/*.js' --exit --timeout 7000"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "chai": "^4.3.7",
+    "mocha": "^10.2.0",
+    "uuid": "^9.0.1"
+  }
+}
